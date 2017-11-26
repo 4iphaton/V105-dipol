@@ -1,0 +1,143 @@
+\section{Auswertung}
+\label{sec:Auswertung}
+
+\subsection{Bestimmung des Dipolmoments per Gravitation}
+
+\begin{table}[H]
+  \centering
+  \caption{Messwerte für die Bestimmung von $\mu_\text{dipol}$ per Gravitation}
+  \label{tab:gravitation_val}
+  \sisetup{table-format=1.2}
+  \begin{tabular}{S[table-format=3.0] S}
+    \toprule
+    $\text{Abstand}$   &    $\text{Grenzstromstärke}$ \\
+    $\text{[mm]}$       &   $\text{[A]}$ \\
+    \midrule
+    101        &   2.50 \\
+     97        &   2.45 \\
+     92        &   2.30 \\
+     87        &   2.20 \\
+     82        &   2.05 \\
+     77        &   1.95 \\
+     72        &   1.80 \\
+     67        &   1.70 \\
+     62        &   1.60 \\
+     57        &   1.50 \\
+     \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{build/gravitation.pdf}
+  \caption{B gegen r aufgetragen zur Bestimmung des magn. Dipolmoments über die Gravitaion.}
+  \label{fig:gravitation}
+\end{figure}
+
+für $B/r$ ergibt sich unter Hilfenahme von Python in Abbildung \ref{fig:gravitation}
+die Steigung $B/r=a=$ \SI{1.708(8)e-2}{\tesla\per\meter}.
+Wird dies nun in \eqref{eqn:grav} eingesetzt ergibt sich für $\mu_\text{Dipol}$
+mit dem Fehler nach \eqref{eqn:gauss}:
+
+\begin{align}
+    \mu_\text{dipol}&=\frac{mg}{a}\\
+    \sigma_\mu &= \left|\frac{-mg}{a^2}\cdot\sigma_a\right|
+\end{align}
+
+\begin{equation*}
+  \mu_\text{dipol}=\SI{0.803(004)}{\ampere\square\meter}
+\end{equation*}
+
+\subsection{Bestimmung des Dipolmoments über die Pendeldauer}
+
+\begin{table}[H]
+  \centering
+  \caption{Messwerte für die Bestimmung von $\mu_\text{dipol}$ per Periodendauer T eines Pendels.}
+  \label{tab:pendel_val}
+  \sisetup{table-format=2.2}
+  \begin{tabular}{S[table-format=1.1] S}
+    \toprule
+    $\text{Stromstärke}$  &   $\text{10Periodendauern}$ \\
+    $\text{[A]}$          &   $\text{[s]}$ \\
+    \midrule
+    0.3            &   27.44 \\
+    0.6            &   20.37 \\
+    0.9            &   16.59 \\
+    1.2            &   14.54 \\
+    1.5            &   13.12 \\
+    1.8            &   11.88 \\
+    2.1            &   11.00 \\
+    2.4            &   10.37 \\
+    2.7            &   9.91 \\
+    3.0            &   9.25 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{build/pendel.pdf}
+  \caption{$T^2$ gegen $1/B$ aufgetragen zur Bestimmung des magn. Dipolmoments über die Pendeldauer.}
+  \label{fig:pendel}
+\end{figure}
+
+für $T^2B$ ergibt sich unter Hilfenahme von Python in Abbildung \ref{tab:pendel_val}
+die Steigung $T^2B=a=$ \SI{1.592(28)e-3}{\tesla\square\second}.Wird dies nun in \eqref{eqn:pendel} eingesetzt ergibt sich für $\mu_\text{Dipol}$
+mit dem Fehler nach \eqref{eqn:gauss}:
+
+\begin{align}
+    \mu_\text{dipol}&=\frac{4\pi^2\symbf{I}_\text{Kugel}}{a}\\
+    \sigma_\mu &= \left|\frac{-4\pi^2\symbf{I}_\text{Kugel}}{a^2}\cdot\sigma_a\right|
+\end{align}
+
+\begin{equation*}
+  \mu_\text{dipol}=\SI{1.008(018)}{\ampere\square\meter}
+\end{equation*}
+
+\subsection{Bestimmung des Dipolmoments über die Präzessionsdauer}
+
+\begin{table}[H]
+  \centering
+  \caption{Messwerte für die Bestimmung von $\mu_\text{dipol}$ per Präzessionsdauer T.}
+  \label{tab:strobo_val}
+  \sisetup{table-format=2.2}
+  \begin{tabular}{S[table-format=1.1] SSSSS}
+    \toprule
+    $\text{Stromstärke}$&$\text{T1}$&$\text{T2}$&$\text{T3}$&$\text{Mittel T}$&$\text{Fehler T}$\\
+    $\text{[A]}$   &$\text{[s]}$   &$\text{[s]}$   &$\text{[s]}$   &$\text{[s]}$ &$\text{[s]}$\\
+    \midrule
+    0.3              & 45.87 &  42.00 &  28.87 &  38.91 &  7.28 \\
+    0.6              & 16.94 &  16.10 &  16.94 &  16.66 &  0.40 \\
+    0.9              & 11.81 &  11.85 &  11.85 &  11.83 &  0.02 \\
+    1.2              & 10.28 &   9.28 &   9.34 &   9.63 &  0.46 \\
+    1.5              &  7.44 &   7.34 &   7.03 &   7.27 &  0.17 \\
+    1.8              &  6.35 &   6.06 &   6.19 &   6.20 &  0.12 \\
+    2.1              &  5.44 &   5.34 &   5.50 &   5.42 &  0.07 \\
+    2.4              &  4.63 &   4.75 &   4.75 &   4.71 &  0.06 \\
+    2.7              &  3.87 &   4.37 &   4.09 &   4.11 &  0.20 \\
+    3.0              &  3.69 &   3.91 &   3.75 &   3.78 &  0.09 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{build/strobo.pdf}
+  \caption{$1/T$ gegen $B$ aufgetragen zur Bestimmung des magn. Dipolmoments über die Pendeldauer.}
+  \label{fig:strobo}
+\end{figure}
+
+In Tabelle \ref{tab:strobo_val} werden zunächst die drei gemessenen Zeiten nach \eqref{eqn:mean} gemittelt und erhalten einen
+Fehler nach \eqref{eqn:std}.
+Für $1/(TB)$ ergibt sich unter Hilfenahme von Python in Abbildung \ref{fig:strobo}
+die Steigung $1/(TB)=a=$ \SI{1.315(9)e2}{\tesla\square\second}.Wird dies nun in \eqref{eqn:strobo} eingesetzt ergibt sich für $\mu_\text{Dipol}$
+mit dem Fehler nach \eqref{eqn:gauss}:
+
+\begin{align}
+    \mu_\text{Dipol}&=4\pi^2\symbf{I}_\text{Kugel}\nu a\\
+    \sigma_\mu &= \left|4\pi^2\symbf{I}_\text{Kugel}\nu\cdot\sigma_a\right|
+\end{align}
+
+\begin{equation*}
+  \mu_\text{dipol}=\SI{0.950(6)}{\ampere\square\meter}
+\end{equation*}

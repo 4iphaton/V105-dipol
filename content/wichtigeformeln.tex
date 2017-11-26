@@ -1,0 +1,51 @@
+\section{Folgende Formeln werden benötigt}
+Feld in der Mitte der Helmholzspule mit N Windungen, Radius R und Abstand d $=2x$:
+\begin{equation}
+  B_0 = \frac{\mu_0I}{2}\frac{\symup{N}\symup{R}^2}{\left(\symup{R}^2+x^2\right)^{3/2}}
+  \label{eqn:b0}
+\end{equation}
+
+Trägheitsmoment $\symbf{I}$ einer Kugel mit Masse M und Radius R:
+\begin{equation}
+  \symbf{I}_\text{Kugel}=\frac{2}{5}\symup{M}\symup{R}^2
+  \label{eqn:Ik}
+\end{equation}
+
+Die Mittelwerte werden durch
+\begin{equation}
+  \overline{x} =\frac{1}{N}\sum_{i=1}^{N} x_i
+  \label{eqn:mean}
+\end{equation}
+bestimmt.
+
+Die Standardabweichung wird durch
+\begin{equation}
+  \sigma = \sqrt{\left(\frac{1}{N}\sum_{i=1}^{N}(x_i-\overline{x})^2\right)}
+  \label{eqn:std}
+\end{equation}
+ errechnet.
+
+Zudem ergibt sich die Fehlerfortpflanzung aus
+\begin{equation}
+ \increment y = \sqrt{\sum_{i=1}^{n}\left(\frac{\partial y}{\partial x_i}
+ \increment x_i\right)^2}
+ \label{eqn:gauss}
+\end{equation}
+
+Bestimmung über Gravitation
+\begin{equation}
+  \mu_\text{dipol}=\frac{mrg}{B}
+  \label{eqn:grav}
+\end{equation}
+
+Bestimmung über Periodendauer des Pendels
+\begin{equation}
+  \mu_\text{Dipol}=\frac{4\pi^2\symbf{I}_\text{Kugel}}{T^2B}
+  \label{eqn:pendel}
+\end{equation}
+
+Bestimmung über Präzessionsdauer bei Drehfrequenz $\nu$
+\begin{equation}
+  \mu_\text{Dipol}=\frac{4\pi^2\symbf{I}_\text{Kugel}*\nu}{TB}
+  \label{eqn:strobo}
+\end{equation}
