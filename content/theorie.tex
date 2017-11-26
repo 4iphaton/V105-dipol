@@ -11,8 +11,39 @@ der schwingenden Kugel und die Präzessionsdauer der rotierenden Kugel zu bestim
 
 Das zu bestimmende magnetische Moment $\mu_{dipol}$ des Stabmagneten
 ist experimentell bestimmbar. Hierfür wird ausgenutzt, dass
-sich ein Dipol solange durch Drehmoment dreht bis $\vec{\mu}$
-parallel zu $\vec{B}$ steht.
+sich ein Dipol solange in einem homogenen Magnetfeld durch ein
+Drehmoment dreht bis $\vec{\mu}$ parallel zu $\vec{B}$ steht.
 \begin{equation}
-  \vec{M} = \vec{\mu} \times \vec{B}
+  \vec{M} = \vec{\mu} \times \vec{B} = \mu \, B \, sin(\theta_{1})
+  \label{eqn:MB}
 \end{equation}
+Das benötigte homogene Magnetfeld wird durch ein Helmholtzspulenpaar erzeugt
+und lässt sich nach
+\begin{equation}
+  B_0 = \frac{\mu_0I}{2}\frac{\symup{N}\symup{R}^2}{\left(\symup{R}^2+x^2\right)^{3/2}}
+  \label{eqn:b0}
+\end{equation}
+berechnen. Wobei die Spule N Windungen, einen Radius von R und einen Abstand von d $=2x$
+besitzt.
+
+Zudem wird das Trägheitsmoment $\symbf{I}$ einer Kugel mit Masse M und Radius R nach
+\begin{equation}
+  \symbf{I}_\text{Kugel}=\frac{2}{5}\symup{M}\symup{R}^2
+  \label{eqn:Ik}
+\end{equation}
+berechnet.
+
+\subsection{Bestimmung über Gravitation}
+Ein Gleichgewicht der Drehmomente der Gravitation nach
+\begin{equation}
+  {\vec{M}}_{g}= m \cdot \left(\vec{r}\times\vec{g}\right) = m\, r \, g\, sin(\theta_{2})
+\end{equation}
+und der homogenen magnetischen Flussdichte %(\cite{eqn:MB})%,
+für $\theta_1 =\theta_2$ wird erreicht und darüber
+\begin{equation}
+  \mu_\text{dipol}=\frac{mrg}{B}
+  \label{eqn:grav}
+\end{equation}
+zu bestimmt.
+%Hierbei ist m die kleine an der Aluminiumstange befestigte Masse und r der Abstand dieser Masse zur Kugel.
+\subsection{Bestimmung über Schwingungsdauer}
